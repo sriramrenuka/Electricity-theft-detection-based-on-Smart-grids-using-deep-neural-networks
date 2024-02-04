@@ -1,0 +1,138 @@
+{% extends 'RUser/design.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 904px;
+    height: 202px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style6 {
+	font-size: 24px;
+	color: #FFFF00;
+	font-weight: bold;
+}
+.style8 {color: #FFFF00; font-weight: bold; }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">PREDICTION OF ELECTRICITY THEFT TYPE !!! </p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="840" align="center">
+                                  <tr>
+                                    <td height="44" colspan="4" bgcolor="#FF0000"><div align="center" class="style8">FEED HERE ALL ELECRICITY DETAILS FOR THEFT PREDICTION !!! </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="361" height="44" bgcolor="#FF0000"><div align="center" class="style8">Enter LCLid</div></td>
+                                    <td width="196"><input type="text" name="LCLid"></td>
+                                    <td width="218" bgcolor="#FF0000"><span class="style8">Enter Age</span></td>
+                                    <td width="532"><input type="text" name="Age"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style8">Enter Sex</div></td>
+                                    <td><select name="Sex">
+                                      <option>---Select---</option>
+                                      <option>M</option>
+                                      <option>F</option>
+                                    </select>                                    </td>
+                                    <td bgcolor="#FF0000"><span class="style8">Enter Day/Date</span></td>
+                                    <td><input type="text" name="day"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style8">Enter Energy_median</div></td>
+                                    <td><input type="text" name="energy_median"></td>
+                                    <td bgcolor="#FF0000"><span class="style8">Enter Energy_mean</span></td>
+                                    <td><input type="text" name="energy_mean"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style8">Enter Energy_max</div></td>
+                                    <td><input type="text" name="energy_max"></td>
+                                    <td bgcolor="#FF0000"><span class="style8">Enter Energy_count</span></td>
+                                    <td><input type="text" name="energy_count"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style8">Enter Energy_std</div></td>
+                                    <td><input type="text" name="energy_std"></td>
+                                    <td bgcolor="#FF0000"><span class="style8">Enter Energy_sum</span></td>
+                                    <td><input type="text" name="energy_sum"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style8">Enter Energy_min</div></td>
+                                    <td><input type="text" name="energy_min"></td>
+                                    <td bgcolor="#FFFFFF"><input name="submit" type="submit" class="style1" value="Predict"></td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                </table>
+					 </fieldset>
+				  </form>
+
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            <hr>
+                            <div>
+                              <table width="870" height="52" border="0" align="center" >
+                                    <tr><td width="563" bgcolor="#FF0000"><div align="center"><span class="style6">PREDICTED ELECTRICITY THEFT TYPE</span> :: </div></td>
+
+
+
+                                      <td width="209" bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{objs}}</div></td></tr>
+                      </table>
+
+
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

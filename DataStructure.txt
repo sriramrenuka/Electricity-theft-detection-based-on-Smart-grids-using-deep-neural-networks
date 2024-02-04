@@ -1,0 +1,30 @@
+Electricity Theft Detection in Smart Grids Based on Deep Neural Network
+
+IEEE Access on Machine Learning,Volume:10,Issue Date:11.April.2022
+
+Deep neural network, electricity theft, machine learning, minimum redundancy maximum
+relevance, principal component analysis, smart grids.
+
+
+
+Electricity_Theft_Detection
+
+
+electricity_theft_detection
+
+
+theft_detection_type
+
+LCLid
+Age
+Sex
+day
+energy_median
+energy_mean
+energy_max
+energy_count
+energy_std
+energy_sum
+energy_min
+Prediction
+

@@ -1,0 +1,17 @@
+install python 3.8
+install wampserver
+install pycharm
+
+
+
+pip install django==3.0
+pip install numpy==20.0.1
+pip install pandas
+pip install matplotlib
+pip install seaborn
+pip install openpyxl
+pip install nltk
+pip install xlt
+pip install mysqlclient
+pip install scikit-learn
+
